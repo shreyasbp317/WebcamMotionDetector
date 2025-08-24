@@ -19,7 +19,7 @@ while True:
 
 
     thresh_frame = cv2.threshold(delta_frame, 60 ,255, cv2.THRESH_BINARY)[1]
-    dil_frame = cv2.dilate(thresh_frame, None, iterations=2)
+    dil_frame = cv2.dilate(thresh_frame, None,iterations=2)
     cv2.imshow("My video", dil_frame)
 
     contours, check = cv2.findContours(dil_frame, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
